@@ -1,5 +1,3 @@
 module.exports = function (context, request) {
-    return {
-        body: process.env["secret"]
-    };
+    context.done(null, {status: 200, body: process.env["secret"]});
 };
