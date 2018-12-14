@@ -1,6 +1,6 @@
 using System;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+using System.Net;
+using System.Net.Http;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 
@@ -8,12 +8,12 @@ namespace ImageProcessor
 {
     public static class Function
     {     
-        [FunctionName("KeyVaultDemoCSharp")]        
-        public static IActionResult Check(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get")]HttpRequest request)
+        [FunctionName("CSharp")]        
+        public static HttpResponseMessage Check(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get")]HttpRequestMessage request)
         {
             string secret = Environment.GetEnvironmentVariable("secret");
-            return new OkObjectResult(secret);           
-        }        
+            return request.CreateResponse(HttpStatusCode.OK, secret);           
+        }   
     }
 }
