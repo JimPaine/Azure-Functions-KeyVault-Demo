@@ -16,7 +16,7 @@
       "counterThreshold": 0.80
     },
     "http": {
-      "routePrefix": "api",
+      "routePrefix": "/",
       "maxOutstandingRequests": 20,
       "maxConcurrentRequests": 10,
       "dynamicThrottlesEnabled": false

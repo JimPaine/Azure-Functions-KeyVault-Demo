@@ -1,5 +1,15 @@
 {
-    "type": "httpTrigger",
-    "name": "$return",
-    "direction": "out"
+    "bindings": [  
+      {  
+        "authLevel": "function",  
+        "type": "httpTrigger",  
+        "direction": "out",  
+        "name": "res",  
+        "methods": [  
+          "get"  
+        ],  
+        "route": "/"  
+      }  
+    ],  
+    "disabled": false
 }
