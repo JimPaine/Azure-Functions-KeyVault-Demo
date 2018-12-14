@@ -7,7 +7,7 @@ The team have added a great feature that allows secrets to be read from an Azure
 
 ## It is all in the wiring up.
 
-You will see in both the Functions.csx and the index.js examples they are simply reading from the environment variables, so how is it happening?
+You will see in both the Functions.csx and the index.js examples are simply reading from the environment variables, so how is it happening?
 
 If you take a look at the azuredeploy.json file you will notice a few key things:
 - I have set the Function App to use [Managed Service Identity](https://github.com/JimPaine/Azure-Functions-KeyVault-Demo/blob/master/azuredeploy.json#L61-L63)
