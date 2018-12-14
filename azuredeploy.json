@@ -118,7 +118,7 @@
                     }
                 }
             ]
-        }
+        },
         {
             "type": "Microsoft.KeyVault/vaults",
             "name": "[variables('vaultName')]",
@@ -157,7 +157,7 @@
             "dependsOn": [
                 "[resourceId('Microsoft.Web/sites', variables('functionName'))]"
             ]
-        }
+        },
         {
             "type": "Microsoft.KeyVault/vaults/secrets",
             "name": "[concat(variables('vaultName'), '/', variables('secret'))]",
