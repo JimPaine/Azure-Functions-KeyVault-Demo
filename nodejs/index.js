@@ -1,7 +1,5 @@
-module.exports = function (context) {
-    context.res = {
-        status: 200,
+module.exports = function (context, request) {
+    return {
         body: process.env["secret"]
     };
-    context.done();
 };
