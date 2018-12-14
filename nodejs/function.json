@@ -1,0 +1,5 @@
+{
+    "type": "httpTrigger",
+    "name": "$return",
+    "direction": "out"
+}
