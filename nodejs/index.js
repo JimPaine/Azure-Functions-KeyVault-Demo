@@ -1,4 +1,4 @@
-module.exports = function (context, req) {
+module.exports = function (context) {
     context.res = {
         status: 200,
         body: process.env["secret"]
